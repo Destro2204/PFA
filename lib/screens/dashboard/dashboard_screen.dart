@@ -17,16 +17,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: Text('GPS Tracker Vest'),
+        title: const Text('GPS Tracker Vest'),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications),
             onPressed: () {
               // Fonctionnalité à implémenter
             },
           ),
           IconButton(
-            icon: Icon(Icons.person),
+            icon: const Icon(Icons.person),
             onPressed: () {
               // Fonctionnalité à implémenter
             },
@@ -54,10 +54,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       color: Theme.of(context).primaryColor,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     'Bonjour, $userName',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                     ),
@@ -67,14 +67,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             ListTile(
               leading: Icon(Icons.dashboard, color: Theme.of(context).primaryColor),
-              title: Text('Tableau de bord'),
+              title: const Text('Tableau de bord'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
               leading: Icon(Icons.map, color: Theme.of(context).primaryColor),
-              title: Text('Carte GPS'),
+              title: const Text('Carte GPS'),
               onTap: () {
                 Navigator.pop(context);
                 // Naviguer vers la page de carte GPS
@@ -82,7 +82,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             ListTile(
               leading: Icon(Icons.history, color: Theme.of(context).primaryColor),
-              title: Text('Historique'),
+              title: const Text('Historique'),
               onTap: () {
                 Navigator.pop(context);
                 // Naviguer vers la page d'historique
@@ -90,16 +90,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ),
             ListTile(
               leading: Icon(Icons.settings, color: Theme.of(context).primaryColor),
-              title: Text('Paramètres'),
+              title: const Text('Paramètres'),
               onTap: () {
                 Navigator.pop(context);
                 // Naviguer vers la page de paramètres
               },
             ),
-            Divider(),
+            const Divider(),
             ListTile(
               leading: Icon(Icons.logout, color: Theme.of(context).primaryColor),
-              title: Text('Déconnexion'),
+              title: const Text('Déconnexion'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, '/login');
@@ -120,7 +120,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   'Bienvenue, $userName',
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   'Voici les données de votre veste GPS',
                   style: TextStyle(
@@ -128,7 +128,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 
                 // Widgets principaux
                 Row(
@@ -136,18 +136,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Expanded(
                       child: HeartRateWidget(),
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     Expanded(
                       child: TemperatureWidget(),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 
                 // Widget d'analyse de données
                 DataAnalysisWidget(),
                 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
               ],
             ),
           ),

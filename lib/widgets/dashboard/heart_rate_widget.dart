@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HeartRateWidget extends StatefulWidget {
+  const HeartRateWidget({super.key});
+
   @override
   _HeartRateWidgetState createState() => _HeartRateWidgetState();
 }
@@ -15,7 +17,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 1000),
     )..repeat(reverse: true);
   }
 
@@ -28,7 +30,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -37,7 +39,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
             color: Colors.grey.withOpacity(0.2),
             spreadRadius: 1,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -52,7 +54,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
               fontSize: 16,
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Stack(
               alignment: Alignment.center,
@@ -63,7 +65,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
                     return Transform.scale(
                       scale: 1.0 + (_animationController.value * 0.1),
                       child: CustomPaint(
-                        size: Size(100, 100),
+                        size: const Size(100, 100),
                         painter: HeartPainter(
                           color: Theme.of(context).primaryColor,
                         ),
@@ -73,7 +75,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
                 ),
                 Text(
                   '$heartRate',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
@@ -82,7 +84,7 @@ class _HeartRateWidgetState extends State<HeartRateWidget>
               ],
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Text(
               'BPM',

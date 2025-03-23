@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class DataAnalysisWidget extends StatelessWidget {
+  const DataAnalysisWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -13,7 +15,7 @@ class DataAnalysisWidget extends StatelessWidget {
             color: Colors.grey.withOpacity(0.2),
             spreadRadius: 1,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -28,17 +30,17 @@ class DataAnalysisWidget extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           
           // Statut global
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.check_circle,
                 color: Colors.green,
                 size: 30,
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +66,7 @@ class DataAnalysisWidget extends StatelessWidget {
             ],
           ),
           
-          Divider(height: 30),
+          const Divider(height: 30),
           
           // Données détaillées
           AnalysisDetailItem(
@@ -75,7 +77,7 @@ class DataAnalysisWidget extends StatelessWidget {
             context: context,
           ),
           
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           
           AnalysisDetailItem(
             icon: Icons.thermostat,
@@ -86,7 +88,7 @@ class DataAnalysisWidget extends StatelessWidget {
             context: context,
           ),
           
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           
           AnalysisDetailItem(
             icon: Icons.speed,
@@ -96,11 +98,11 @@ class DataAnalysisWidget extends StatelessWidget {
             context: context,
           ),
           
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           
           // Recommandations
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.blue[50],
               borderRadius: BorderRadius.circular(8),
@@ -116,7 +118,7 @@ class DataAnalysisWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   'Surveillance de la température à poursuivre. Maintenir une bonne hydratation.',
                   style: TextStyle(
@@ -141,14 +143,14 @@ class AnalysisDetailItem extends StatelessWidget {
   final BuildContext context;
 
   const AnalysisDetailItem({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.value,
     required this.status,
     this.isWarning = false,
     required this.context,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -159,7 +161,7 @@ class AnalysisDetailItem extends StatelessWidget {
           color: Theme.of(context).primaryColor,
           size: 24,
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Expanded(
           child: Text(
             title,
@@ -169,7 +171,7 @@ class AnalysisDetailItem extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           value,
           style: TextStyle(
@@ -178,9 +180,9 @@ class AnalysisDetailItem extends StatelessWidget {
             fontSize: 14,
           ),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           decoration: BoxDecoration(
             color: isWarning ? Colors.orange[100] : Colors.green[100],
             borderRadius: BorderRadius.circular(12),
@@ -195,6 +197,6 @@ class AnalysisDetailItem extends StatelessWidget {
           ),
         ),
       ],
-    );
+   );
   }
 }

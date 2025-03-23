@@ -3,6 +3,8 @@ import '../../widgets/common/custom_button.dart';
 import '../../widgets/common/custom_text_field.dart';
 
 class RegistrationScreen extends StatefulWidget {
+  const RegistrationScreen({super.key});
+
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
@@ -18,7 +20,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inscription'),
+        title: const Text('Inscription'),
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).primaryColor,
         elevation: 0,
@@ -39,7 +41,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       style: Theme.of(context).textTheme.displayMedium,
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     
                     // Champs d'inscription
                     CustomTextField(
@@ -53,7 +55,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         return null;
                       },
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     CustomTextField(
                       controller: _emailController,
                       hintText: 'Email',
@@ -68,7 +70,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         return null;
                       },
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     CustomTextField(
                       controller: _passwordController,
                       hintText: 'Mot de passe',
@@ -84,7 +86,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         return null;
                       },
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     CustomTextField(
                       controller: _confirmPasswordController,
                       hintText: 'Confirmer le mot de passe',
@@ -101,7 +103,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                     ),
                     
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     
                     // Bouton d'inscription
                     CustomButton(
@@ -114,7 +116,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                     ),
                     
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     
                     // Option de connexion
                     Row(

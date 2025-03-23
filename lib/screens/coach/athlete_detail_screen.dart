@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 class AthleteDetailScreen extends StatefulWidget {
   final Map<String, dynamic>? athleteData;
 
-  const AthleteDetailScreen({Key? key, this.athleteData}) : super(key: key);
+  const AthleteDetailScreen({super.key, this.athleteData});
 
   @override
   _AthleteDetailScreenState createState() => _AthleteDetailScreenState();
@@ -1307,7 +1307,7 @@ class _AthleteDetailScreenState extends State<AthleteDetailScreen> with SingleTi
               ],
             ),
             const SizedBox(height: 24),
-            Container(
+            SizedBox(
               height: 200,
               child: CustomPaint(
                 painter: HeartRateGraphPainter(
@@ -1413,9 +1413,9 @@ class _AthleteDetailScreenState extends State<AthleteDetailScreen> with SingleTi
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         '+0.7 km/h',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.green,
                           fontWeight: FontWeight.bold,
                         ),
@@ -1478,9 +1478,9 @@ class _AthleteDetailScreenState extends State<AthleteDetailScreen> with SingleTi
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         '+12 watts',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.green,
                           fontWeight: FontWeight.bold,
                         ),
@@ -1638,7 +1638,7 @@ class HeartRateGraphPainter extends CustomPainter {
       ..style = PaintingStyle.fill;
     
     final double maxValue = data.map((e) => e['value'] as num).reduce((a, b) => a > b ? a : b).toDouble();
-    final double minValue = 50; // Minimum heart rate to show
+    const double minValue = 50; // Minimum heart rate to show
     
     final Path linePath = Path();
     final Path fillPath = Path();

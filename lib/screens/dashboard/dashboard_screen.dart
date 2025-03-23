@@ -4,6 +4,8 @@ import '../../widgets/dashboard/temperature_widget.dart';
 import '../../widgets/dashboard/data_analysis_widget.dart';
 
 class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }

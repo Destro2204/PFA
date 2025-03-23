@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import '../../widgets/common/custom_button.dart';
 
 class RoleSelectionScreen extends StatelessWidget {
+  const RoleSelectionScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

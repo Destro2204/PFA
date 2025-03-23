@@ -1,6 +1,8 @@
   import 'package:flutter/material.dart';
 
 class CoachDashboardScreen extends StatefulWidget {
+  const CoachDashboardScreen({super.key});
+
   @override
   _CoachDashboardScreenState createState() => _CoachDashboardScreenState();
 }

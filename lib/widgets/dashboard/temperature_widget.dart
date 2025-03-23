@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TemperatureWidget extends StatelessWidget {
-  final double temperature = 37.2; // Simulé pour le MVP
+  final double temperature = 37.2;
+
+  const TemperatureWidget({super.key}); // Simulé pour le MVP
 
   Color _getTemperatureColor(double temp) {
     if (temp < 36.0) {
@@ -20,7 +22,7 @@ class TemperatureWidget extends StatelessWidget {
     final Color tempColor = _getTemperatureColor(temperature);
     
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -29,7 +31,7 @@ class TemperatureWidget extends StatelessWidget {
             color: Colors.grey.withOpacity(0.2),
             spreadRadius: 1,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -44,7 +46,7 @@ class TemperatureWidget extends StatelessWidget {
               fontSize: 16,
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Stack(
               alignment: Alignment.center,
@@ -75,7 +77,7 @@ class TemperatureWidget extends StatelessWidget {
                   child: Center(
                     child: Text(
                       '${temperature.toStringAsFixed(1)}°C',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -86,7 +88,7 @@ class TemperatureWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Center(
             child: Text(
               temperature >= 38.0
